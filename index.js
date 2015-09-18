@@ -49,7 +49,7 @@ async.each(pages, (page, callback) => {
     return b.playCount - a.playCount;
   });
 
-  fs.writeFile(path.normalize(`${__dirname}/ranking.txt`), JSON.stringify(ranking), err => {
+  fs.writeFile(path.normalize(`${__dirname}/ranking.txt`), JSON.stringify(ranking, null, '  '), err => {
     if (err) throw err;
   });
 });
